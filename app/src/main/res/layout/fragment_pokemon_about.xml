@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pokemondetail.sections.about.PokemonAboutFragment">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundColor"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/separation_medium"
+            style:divider="@drawable/divider_vertical_long"
+            style:showDividers="middle">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/separation_small"
+                style:divider="@drawable/divider_vertical_small"
+                style:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGenera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textAppearance="@style/text_subtitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unknown_description"
+                    android:textAppearance="@style/text_body" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/separation_small"
+                style:divider="@drawable/divider_vertical_small"
+                style:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/separation_small"
+                    android:text="@string/pokedex_data"
+                    android:textAppearance="@style/text_subtitle" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0,1">
+
+                    <!-- Color -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/separation_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/color"
+                            android:textAppearance="@style/text_body"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            style:divider="@drawable/divider_small"
+                            style:showDividers="middle">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivColor"
+                                android:layout_width="@dimen/image_small_size"
+                                android:layout_height="@dimen/image_small_size"
+                                android:background="@drawable/ic_color"
+                                android:src="@drawable/ic_color"
+                                android:tint="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unknown_data"
+                                android:textAppearance="@style/text_body" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </TableRow>
+                    <!-- Specie -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/separation_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pokemon_specie"
+                            android:textAppearance="@style/text_body"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSpecie"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unknown_data"
+                            android:textAppearance="@style/text_body" />
+                    </TableRow>
+                    <!-- Shape -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/separation_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shape"
+                            android:textAppearance="@style/text_body"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvShape"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unknown_data"
+                            android:textAppearance="@style/text_body" />
+                    </TableRow>
+                    <!-- Capture rate -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/separation_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/capture_rate"
+                            android:textAppearance="@style/text_body"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCaptureRate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unknown_data"
+                            android:textAppearance="@style/text_body" />
+                    </TableRow>
+                    <!-- Habitat -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/separation_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/habitat"
+                            android:textAppearance="@style/text_body"
+                            android:textColor="?attr/colorOnPrimary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHabitat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/unknown_data"
+                            android:textAppearance="@style/text_body" />
+
+                    </TableRow>
+                </TableLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/separation_small"
+                style:divider="@drawable/divider_vertical_small"
+                style:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/separation_small"
+                    android:text="@string/eggs_groups"
+                    android:textAppearance="@style/text_subtitle" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/eggsGroups"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style:selectionRequired="false"
+                    style:singleLine="false" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/containerVarieties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/separation_small"
+                style:divider="@drawable/divider_vertical_small"
+                style:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/separation_small"
+                    android:text="@string/varieties"
+                    android:textAppearance="@style/text_subtitle" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNoVarieties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pokemon_without_variants"
+                    android:textAppearance="@style/text_body"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVarieties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <include
+        android:id="@+id/phAbout"
+        layout="@layout/placeholder_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

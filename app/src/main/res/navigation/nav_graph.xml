@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokemonList">
+
+    <fragment
+        android:id="@+id/pokemonList"
+        android:name="dev.jgm.pokedex.ui.pokemonlist.PokemonListFragment"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_to_pokemonDetail"
+            app:destination="@id/pokemonDetail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/scale_out"
+            app:popEnterAnim="@anim/scale_in"
+            app:popExitAnim="@android:anim/fade_out">
+            <argument
+                android:name="pokemonName"
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonDetail"
+        android:name="dev.jgm.pokedex.ui.pokemondetail.PokemonDetailFragment"
+        android:label="fragment_pokemon_detail"
+        tools:layout="@layout/fragment_pokemon_detail" >
+        <argument
+            android:name="pokemonName"
+            app:argType="string"
+            android:defaultValue="no_pokemon" />
+        <action
+            android:id="@+id/action_pokemonDetail"
+            app:destination="@id/pokemonDetail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/scale_out"
+            app:popEnterAnim="@anim/scale_in"
+            app:popExitAnim="@android:anim/fade_out">
+            <argument
+                android:name="pokemonName"
+                app:argType="string"/>
+        </action>
+    </fragment>
+</navigation>

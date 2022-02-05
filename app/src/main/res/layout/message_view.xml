@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:visibility="gone"
+    android:background="?attr/backgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginBottom="@dimen/separation_long"
+        android:layout_marginHorizontal="@dimen/separation_long"
+        tools:src="@drawable/img_no_internet_connection"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_pokemon_list"
+        android:textAppearance="@style/text_title"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="?attr/colorOnSecondary"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/separation_long"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/text_subtitle"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="?attr/colorOnSecondary"
+        android:layout_marginHorizontal="@dimen/separation_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="@dimen/separation_medium"
+        android:text="@string/no_pokemon_matches_the_search" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        android:textAppearance="@style/text_subtitle"
+        android:backgroundTint="?attr/colorAccent"
+        android:textColor="@color/dark"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/separation_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body"
+        android:layout_marginHorizontal="@dimen/separation_long"
+        android:layout_marginTop="@dimen/separation_long"
+        android:stateListAnimator="@animator/lift_on_touch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

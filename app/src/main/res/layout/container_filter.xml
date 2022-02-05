@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="?colorSurface"
+    app:cardCornerRadius="@dimen/corner_radius_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/separation_small"
+        android:paddingHorizontal="@dimen/separation_medium">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:button="@android:color/transparent"
+                android:textAppearance="@style/text_subtitle"
+                android:textColor="?attr/colorOnSecondary"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_left"
+                android:tint="?attr/colorOnPrimary"
+                android:rotation="-90"
+                android:layout_gravity="end"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/separation_medium"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            android:alpha="0.85">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/separation_medium"
+                android:layout_marginHorizontal="@dimen/separation_medium"
+                android:text="@string/order_by_orientation"
+                android:textAppearance="@style/text_subtitle"
+                android:textColor="?attr/colorOnSecondary" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/separation_medium"
+                android:divider="@drawable/divider_medium"
+                android:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbOrderAsc"
+                    style="@style/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/order_asc" />
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbOrderDesc"
+                    style="@style/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_desc" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/separation_long"
+                android:layout_marginBottom="@dimen/separation_medium"
+                android:layout_marginHorizontal="@dimen/separation_medium"
+                android:text="@string/order_by_type"
+                android:textAppearance="@style/text_subtitle"
+                android:textColor="?attr/colorOnSecondary" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_medium"
+                android:layout_marginHorizontal="@dimen/separation_medium"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbNumber"
+                    style="@style/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/number" />
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbName"
+                    style="@style/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondary"
+                android:stateListAnimator="@animator/lift_on_touch"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                android:textAppearance="@style/text_subtitle"
+                android:textColor="@color/dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

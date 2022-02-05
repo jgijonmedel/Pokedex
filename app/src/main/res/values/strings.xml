@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="order_desc">Decendente</string>
+    <string name="order_asc">Acendente</string>
+    <string name="order_by_orientation">Orden:</string>
+    <string name="order_by_type">Pordenar por:</string>
+
+    <string name="unknown_data">¿?</string>
+    <string name="lorem_paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim "</string>
+
+    <string name="write_name_or_number_pokemon">"Puesdes buscar un pokémon escribiendo su nombre o número en la barra de busqueda"</string>
+    <string name="empty_pokemon_list">Lista de pokemones vacía</string>
+    <string name="what_pokemon_are_you_looking_for">"¿Qué pokémon estas buscando? "</string>
+    <string name="no_pokemon_matches_the_search">Ningún pokemon coincide con la búsqueda realizada</string>
+    <string name="no_internet_connection">¡Oh, vaya! parece que no tienes acceso a Internet</string>
+    <string name="need_internet_connection">Necesitas conectarte a internet para poder ver los pokémons</string>
+
+    <string name="type_bug">Bicho</string>
+    <string name="type_dark">Oscuro</string>
+    <string name="type_dragon">Dragón</string>
+    <string name="type_electric">Eléctrico</string>
+    <string name="type_fairy">Hhada</string>
+    <string name="type_fighting">lucha</string>
+    <string name="type_fire">Fuego</string>
+    <string name="type_flying">Volador</string>
+    <string name="type_ghost">Fantasma</string>
+    <string name="type_grass">Planta</string>
+    <string name="type_ground">Tierra</string>
+    <string name="type_ice">Hielo</string>
+    <string name="type_normal">Normal</string>
+    <string name="type_poison">Veneno</string>
+    <string name="type_psychic">Psíquico</string>
+    <string name="type_rock">Rock</string>
+    <string name="type_steel">Acero</string>
+    <string name="type_water">Agua</string>
+
+    <!--Colors -->
+    <string name="green">Verde</string>
+    <string name="blue">Azul</string>
+    <string name="red">Rojo</string>
+    <string name="white">Blanco</string>
+    <string name="yellow">Amarillo</string>
+    <string name="purple">Morado</string>
+    <string name="pink">Rosa</string>
+    <string name="gray">Gris</string>
+    <string name="brown">Cafe</string>
+    <string name="black">Negro</string>
+
+    <string name="help">Ayuda</string>
+    <string name="try_again">Volver a intentar</string>
+
+    <string name="unknown_description">No se encontró descripción para este pokémon</string>
+    <string name="pokedex_data">Datos de la pokedex</string>
+    <string name="pokemon_sex">Sexos:</string>
+    <string name="pokedex_category">Categoría</string>
+    <string name="pokemon_specie">Especie:</string>
+    <string name="pokedex_debility">Debilidades</string>
+    <string name="pokedex_weaknesses">Debilidades</string>
+    <string name="color">Color:</string>
+    <string name="about">Acerca de</string>
+    <string name="capture_rate">Tasa de captura:</string>
+    <string name="eggs_groups">Grupos de huevos:</string>
+    <string name="habitat">Hábitat:</string>
+    <string name="shape">Forma:</string>
+    <string name="number">Número</string>
+    <string name="apply">Apply</string>
+    <string name="filter">Filtrar</string>
+    <string name="Search">Buscar</string>
+    <string name="name">Nombre</string>
+    <string name="height">%1$s m</string>
+    <string name="weight">%1$s kg</string>
+    <string name="hint_height">Altura: ¿?</string>
+    <string name="hint_weight">Peso: ¿?</string>
+
+    <string name="shape_ball">Bola</string>
+    <string name="shape_squiggle">Garabato</string>
+    <string name="shape_fish">Pescado</string>
+    <string name="shape_arms">Brazos</string>
+    <string name="shape_blob">Gota</string>
+    <string name="shape_upright">Vertical</string>
+    <string name="shape_legs">Piernas</string>
+    <string name="shape_quadruped">Cuadrúpedo</string>
+    <string name="shape_wings">Alas</string>
+    <string name="shape_tentacles">Tentáculos</string>
+    <string name="shape_heads">Cabezas</string>
+    <string name="shape_humanoid">Humanoide</string>
+    <string name="shape_bug_wings">Alas de insecto</string>
+    <string name="shape_bug_armor">Armadura</string>
+    <string name="egg_monster">Monstruo</string>
+    <string name="egg_water1">Agua 1</string>
+    <string name="egg_plant">Planta</string>
+    <string name="egg_humanshape">Forma humana</string>
+    <string name="egg_water3">Agua 3</string>
+    <string name="egg_mineral">Mineral</string>
+    <string name="egg_indeterminate">Indeterminado</string>
+    <string name="egg_water2">Agua 2</string>
+    <string name="egg_ditto">Idem</string>
+    <string name="egg_no_eggs">Sin huevo</string>
+    <string name="varieties">Variantes</string>
+    <string name="base_happiness">Felicidad base:</string>
+    <string name="pokemon_without_variants">Este pokémon no tiene variantes</string>
+    <string name="stat">Estadísticas</string>
+    <string name="base_stats">Estadísticas base</string>
+    <string name="attack">Ataque</string>
+    <string name="defense">Defensa</string>
+    <string name="special_attack">Ataque esp.</string>
+    <string name="special_defense">Defensa esp.</string>
+    <string name="speed">Velocidad</string>
+    <string name="accuracy">Precisión</string>
+    <string name="evasion">Evasión</string>
+    <string name="hp">PS</string>
+
+</resources>

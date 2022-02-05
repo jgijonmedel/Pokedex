@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pokedex" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_variant</item>
+        <item name="colorOnSecondary">@color/dark_density_medium</item>
+        <item name="backgroundColor">@color/light_background</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <!-- Status bar color. -->
+        <!-- <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item> -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/backgroundColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:screenOrientation">sensorPortrait</item>
+    </style>
+
+    <style name="text_header" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:textSize">@dimen/text_header</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="text_title" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="text_subtitle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:textSize">@dimen/text_subtitle</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="text_body" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="text_detail" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_details</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="text_smallest" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_smallest</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="radio" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:textAppearance">@style/text_body</item>
+        <item name="android:background">@drawable/radio_bg</item>
+        <item name="android:paddingStart">@dimen/separation_small</item>
+        <item name="android:paddingEnd">@dimen/separation_small</item>
+        <item name="android:stateListAnimator">@animator/lift_on_touch</item>
+        <item name="android:elevation">@dimen/separation_small</item>
+        <item name="android:textColor">@drawable/radio_text_color</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+</resources>

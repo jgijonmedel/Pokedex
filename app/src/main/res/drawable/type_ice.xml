@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50dp"
+    android:height="50dp"
+    android:viewportWidth="50"
+    android:viewportHeight="50">
+  <path
+      android:pathData="M25.0098,48.8436C38.1728,48.8436 48.8436,38.1729 48.8436,25.0098C48.8436,11.8468 38.1728,1.176 25.0098,1.176C11.8468,1.176 1.176,11.8468 1.176,25.0098C1.176,38.1729 11.8468,48.8436 25.0098,48.8436Z"
+      android:fillColor="#00000000"/>
+  <path
+      android:pathData="M14.0355,20.1421L24.0512,25.0152L14.0355,29.8772L4.0196,25.0163L14.0355,20.1421Z"
+      android:fillColor="@color/type_ice_light"/>
+  <path
+      android:pathData="M35.9841,20.1422L25.9684,25.0153L35.9841,29.8773L46,25.0164L35.9841,20.1422Z"
+      android:fillColor="@color/type_ice_light"/>
+  <path
+      android:pathData="M35.9841,7.6063L25.9684,12.8781V23.2007L26.0445,23.1629L26.1867,23.0921L35.9813,18.2183L35.9811,18.2181L35.9841,18.2167V7.6063Z"
+      android:fillColor="@color/type_ice_light"/>
+  <path
+      android:pathData="M35.9841,42.413L25.9684,37.1412V26.8186L26.0445,26.8564L26.1867,26.9272L35.9813,31.801L35.9811,31.8012L35.9841,31.8026V42.413Z"
+      android:fillColor="@color/type_ice_light"/>
+  <path
+      android:pathData="M14.0355,7.6063L24.0512,12.8781V23.2007L23.9751,23.1629L23.8329,23.0921L14.0383,18.2183L14.0385,18.2181L14.0355,18.2167V7.6063Z"
+      android:fillColor="@color/type_ice_light"/>
+  <path
+      android:pathData="M14.0355,42.413L24.0512,37.1412V26.8186L23.9751,26.8564L23.8329,26.9272L14.0383,31.801L14.0385,31.8012L14.0355,31.8026V42.413Z"
+      android:fillColor="@color/type_ice_light"/>
+</vector>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    android:orientation="vertical"
+    android:padding="@dimen/separation_medium"
+    style:divider="@drawable/divider_vertical_small"
+    style:showDividers="middle">
+
+    <View
+        android:layout_width="@dimen/image_medium_size"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/image_long_size"
+        android:layout_height="@dimen/image_small_size"
+        android:layout_marginBottom="@dimen/separation_long"
+        android:background="@color/shimmer_placeholder" />
+
+
+    <View
+        android:layout_width="@dimen/image_long_size"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_95sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:layout_marginBottom="@dimen/separation_long"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style:divider="@drawable/divider_medium"
+        style:showDividers="middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/separation_long"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/separation_long"
+            android:background="@color/shimmer_placeholder" />
+
+        <View
+            android:layout_width="@dimen/image_medium_size"
+            android:layout_height="@dimen/separation_long"
+            android:background="@color/shimmer_placeholder" />
+
+        <View
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/separation_long"
+            android:background="@color/shimmer_placeholder" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/image_long_size"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+    <View
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/image_small_size"
+        android:background="@color/shimmer_placeholder" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

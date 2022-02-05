@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    
+    <color name="primary">#3B45A9</color>
+    <color name="primary_variant">#2E368E</color>
+    <color name="accent">#FFC73B</color>
+    <color name="accent_variant">#D19C16</color>
+
+
+    <color name="dark_background">#0F1011</color>
+    <color name="light_background">#FDFEFE</color>
+
+    <color name="dark_surface">#03FFFFFF</color>
+    <color name="light_surface">#05000000</color>
+
+    <color name="dark">#E6000000</color>
+    <color name="dark_density_medium">#B3000000</color>
+    <color name="dark_density_light">#99000000</color>
+
+    <color name="light_density_medium">#B3FFFFFF</color>
+    <color name="light_density_light">#99FFFFFF</color>
+
+    <color name="shimmer_placeholder">#408B8B8B</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#99FFFFFF</color>
+    <color name="brown">#99AC633C</color>
+    <color name="gray">#998B8B8B</color>
+    <color name="green">#9929FF11</color>
+    <color name="pink">#99FF57BB</color>
+    <color name="purple">#999F18FF</color>
+    <color name="red">#99FF1A22</color>
+    <color name="yellow">#99FFF41F</color>
+
+    <color name="type_bug_light">#FF5CB71B</color>
+    <color name="type_dark_light">#FF74719C</color>
+    <color name="type_dragon_light">#FF38E9A9</color>
+    <color name="type_electric_light">#FFFADC42</color>
+    <color name="type_fairy_light">#FFFD70A6</color>
+    <color name="type_fighting_light">#FFFF833E</color>
+    <color name="type_fire_light">#FFFF3F4A</color>
+    <color name="type_flying_light">#FF9BBAD2</color>
+    <color name="type_ghost_light">#FF936896</color>
+    <color name="type_grass_light">#FF36EE69</color>
+    <color name="type_ground_light">#FFA77C29</color>
+    <color name="type_ice_light">#FF7AD8F0</color>
+    <color name="type_normal_light">#FFD49EAB</color>
+    <color name="type_poison_light">#FFA16AE5</color>
+    <color name="type_psychic_light">#FFFF30D1</color>
+    <color name="type_rock_light">#FFA84E3A</color>
+    <color name="type_steel_light">#FF4AC49B</color>
+    <color name="type_water_light">#516EFF</color>
+
+    <color name="type_bug_dark">#448614</color>
+    <color name="type_dark_dark">#504E6B</color>
+    <color name="type_dragon_dark">#2BAB7D</color>
+    <color name="type_electric_dark">#C7AF34</color>
+    <color name="type_fairy_dark">#C85280</color>
+    <color name="type_fighting_dark">#D3692E</color>
+    <color name="type_fire_dark">#D32630</color>
+    <color name="type_flying_dark">#667D90</color>
+    <color name="type_ghost_dark">#784E7B</color>
+    <color name="type_grass_dark">#27B24D</color>
+    <color name="type_ground_dark">#78581C</color>
+    <color name="type_ice_dark">#61ACC0</color>
+    <color name="type_normal_dark">#AB7E88</color>
+    <color name="type_poison_dark">#784EAC</color>
+    <color name="type_psychic_dark">#CE24A8</color>
+    <color name="type_rock_dark">#7F4129</color>
+    <color name="type_steel_dark">#2E7960</color>
+    <color name="type_water_dark">#3C51B9</color>
+</resources>

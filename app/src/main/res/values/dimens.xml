@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="separation_small">@dimen/_5sdp</dimen>
+    <dimen name="separation_medium">@dimen/_10sdp</dimen>
+    <dimen name="separation_long">@dimen/_25sdp</dimen>
+
+    <dimen name="image_medium_size">@dimen/_50sdp</dimen>
+    <dimen name="image_small_size">@dimen/_15sdp</dimen>
+    <dimen name="image_long_size">@dimen/_150sdp</dimen>
+
+    <dimen name="corner_radius_small">@dimen/_3sdp</dimen>
+    <dimen name="corner_radius_medium">@dimen/_8sdp</dimen>
+    <dimen name="corner_radius_long">@dimen/_10sdp</dimen>
+
+    <dimen name="height_details_expanded">@dimen/_250sdp</dimen>
+    <dimen name="height_details_collapse">@dimen/_170sdp</dimen>
+
+    <dimen name="text_header">@dimen/_20ssp</dimen>
+    <dimen name="text_title">@dimen/_16sdp</dimen>
+    <dimen name="text_subtitle">@dimen/_12ssp</dimen>
+    <dimen name="text_body">@dimen/_11ssp</dimen>
+    <dimen name="text_details">@dimen/_8ssp</dimen>
+    <dimen name="text_smallest">@dimen/_6ssp</dimen>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/separation_small"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    style:divider="@drawable/divider_medium"
+    style:showDividers="middle">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        tools:text="Ataque esp."
+        android:textAppearance="@style/text_body"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        tools:text="0"
+        android:gravity="end"
+        android:textAppearance="@style/text_body"/>
+
+    <ProgressBar
+        android:id="@+id/bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/separation_small"
+        android:layout_weight=".65"
+        android:progress="0"
+        android:max="250"
+        android:progressDrawable="@drawable/ic_linear_progress" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
