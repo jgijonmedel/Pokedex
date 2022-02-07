@@ -6,13 +6,14 @@ Aplicación móvil para la plataforma Android que mediante una lista muestra los
 <br/>
 
 ## Contenido
-1. [General Info](#general-info)
+1. [Información general](#información-general)
 2. [Construido con](#construido-con)
 3. [Interfaz de usuario](#interfaz-de-usuario)
+4. [Demo](#demo)
 
 </br>
 
-## General info
+## Información general
 La aplicación es un ejemplo de tipo **master-detail** que cuenta con dos pantallas.
 
 La primera en la que se muestra la lista de los diferentes pokémos que se obtienen a consultar la API publica [PokeApi](https://pokeapi.co/docs/v2), en dicha lista se puede realizar una búsqueda de pokémons escribiendo ya sea el nombre o numero en la barra de búsqueda ubicada en la parte superior de la pantalla.
