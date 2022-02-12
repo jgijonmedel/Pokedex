@@ -1,12 +1,8 @@
 package dev.jgm.pokedex.ui.pokemonlist
 
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.palette.graphics.Palette
 import dev.jgm.pokedex.core.response.Response
 import dev.jgm.pokedex.data.model.PokeApiResponse
 import dev.jgm.pokedex.data.model.PokedexItem
@@ -80,7 +76,7 @@ class PokemonListViewModel : ViewModel() {
 
     private fun onSuccessResponse(response: PokeApiResponse){
         val data = response.results ?: emptyList()
-        data.mapIndexed { index, pokeResult ->
+        data.map { pokeResult ->
             val number = pokeResult.url.getIdFromUrl()
             val pokedexItem = PokedexItem(
                 pokeResult.name,
@@ -90,17 +86,5 @@ class PokemonListViewModel : ViewModel() {
             cacheList = cacheList + pokedexItem
         }
         pokedexList.value = cacheList
-    }
-
-
-    fun calcDominantColor(drawable: Drawable, onFinish: (Int) -> Unit) {
-        val bmp = (drawable as BitmapDrawable).bitmap.copy(Bitmap.Config.ARGB_8888, true)
-
-        Palette.from(bmp).generate { palette ->
-            palette?.getDominantColor(0x000000)
-            palette?.dominantSwatch?.rgb?.let { colorValue ->
-                onFinish(colorValue)
-            }
-        }
     }
 }

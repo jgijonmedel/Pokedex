@@ -26,7 +26,6 @@ import dev.jgm.pokedex.utils.ThemeMode
 fun ImageView.loadImage(
     url: String,
     @DrawableRes idPlaceholder: Int = R.drawable.ic_circular_progress_light,
-    onFinish: (Int) -> Unit = {}
 ) {
     val uri = Uri.parse(url)
     Glide.with(this.context)

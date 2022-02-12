@@ -87,7 +87,10 @@ class PokemonStatsFragment : BaseFragmentSection(R.layout.fragment_pokemon_stats
         }
 
         viewModel.isError.observe(viewLifecycleOwner) { isError ->
-            //if (isError) showMessageError() else hideMessage()
+            if (isError) {
+                binding.tvNoSpecialAbilities.visibility = View.VISIBLE
+                binding.loading.root.visibility = View.GONE
+            }
         }
 
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
