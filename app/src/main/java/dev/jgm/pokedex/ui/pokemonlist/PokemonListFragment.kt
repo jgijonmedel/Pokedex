@@ -19,11 +19,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jgm.pokedex.R
-import dev.jgm.pokedex.utils.extension.hideKeyboard
 import dev.jgm.pokedex.data.model.PokedexItem
 import dev.jgm.pokedex.databinding.FragmentPokemonListBinding
 import dev.jgm.pokedex.ui.pokemonlist.adapter.PokemonListAdapter
 import dev.jgm.pokedex.utils.OrderPokedexValue
+import dev.jgm.pokedex.utils.extension.hideKeyboard
 
 class PokemonListFragment : Fragment(R.layout.fragment_pokemon_list) {
 
@@ -135,33 +135,34 @@ class PokemonListFragment : Fragment(R.layout.fragment_pokemon_list) {
     }
 
     private fun initObservers() {
-        viewModel.pokedexList.observe(viewLifecycleOwner, { pokemonList ->
+        viewModel.pokedexList.observe(viewLifecycleOwner) { pokemonList ->
             if (pokemonList.isNotEmpty()) {
                 adapter.pokemonList = pokemonList
                 hideMessage()
             } else {
                 showMessageEmptyList()
             }
-        })
+        }
 
-        viewModel.isError.observe(viewLifecycleOwner, { isError ->
+        viewModel.isError.observe(viewLifecycleOwner) { isError ->
             if (isError) showMessageError() else hideMessage()
-        })
+        }
 
-        viewModel.isLoading.observe(viewLifecycleOwner, { isLoading ->
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             if (isLoading) {
+                hideMessage()
                 binding.placeholder.root.visibility = View.VISIBLE
                 val anim = AnimationUtils.loadAnimation(context, R.anim.infinite_fade)
-                binding.placeholder.root.startAnimation(anim)
+                binding.placeholder.view.startAnimation(anim)
             } else {
                 binding.refreshLayout.isRefreshing = isLoading
                 binding.refreshLayout.visibility = View.VISIBLE
                 binding.rvPokemonList.visibility = View.VISIBLE
-                binding.placeholder.root.clearAnimation()
+                binding.placeholder.view.clearAnimation()
                 binding.placeholder.root.visibility = View.GONE
             }
             resetFilter()
-        })
+        }
     }
 
     private fun openPokemonDetail(pokedexItem: PokedexItem) {

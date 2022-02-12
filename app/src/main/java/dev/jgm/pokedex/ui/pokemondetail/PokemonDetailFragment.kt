@@ -2,11 +2,11 @@ package dev.jgm.pokedex.ui.pokemondetail
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -21,7 +21,6 @@ import dev.jgm.pokedex.ui.pokemondetail.sections.BaseFragmentSection
 import dev.jgm.pokedex.ui.pokemondetail.sections.about.PokemonAboutFragment
 import dev.jgm.pokedex.ui.pokemondetail.sections.stat.PokemonStatsFragment
 import dev.jgm.pokedex.utils.extension.*
-import kotlin.collections.ArrayList
 
 class PokemonDetailFragment : Fragment(R.layout.fragment_pokemon_detail) {
 
@@ -78,6 +77,7 @@ class PokemonDetailFragment : Fragment(R.layout.fragment_pokemon_detail) {
             PokemonStatsFragment().apply {
                 arguments = Bundle().apply {
                     putSerializable("stats", ArrayList(pokemon.stats))
+                    putSerializable("abilities", ArrayList(pokemon.abilities))
                 }
             }
         )
@@ -97,12 +97,14 @@ class PokemonDetailFragment : Fragment(R.layout.fragment_pokemon_detail) {
     }
 
     private fun initObservers() {
-        viewModel.pokemon.observe(viewLifecycleOwner, { pokemon ->
+        viewModel.pokemon.observe(viewLifecycleOwner) { pokemon ->
             if (pokemon != null) {
                 binding.tvName.text = pokemon.name.firstCapitalLetter()
                 binding.tvNumber.text = pokemon.id.formatDisplay()
-                binding.tvHeight.text = getString(R.string.height, pokemon.height.toDouble().calculateDimen())
-                binding.tvWeight.text = getString(R.string.weight, pokemon.weight.toDouble().calculateDimen())
+                binding.tvHeight.text =
+                    getString(R.string.height, pokemon.height.toDouble().calculateDimen())
+                binding.tvWeight.text =
+                    getString(R.string.weight, pokemon.weight.toDouble().calculateDimen())
 
                 pokemon.sprites.other.official_artwork?.front_default?.let {
                     binding.ivImage.loadImage(it)
@@ -110,19 +112,19 @@ class PokemonDetailFragment : Fragment(R.layout.fragment_pokemon_detail) {
                 setUpTabs(pokemon)
                 setUpTypes(pokemon.types)
             }
-        })
+        }
 
-        viewModel.isLoading.observe(viewLifecycleOwner, { isLoading ->
-            if (isLoading) {
-                binding.loading.root.visibility = View.VISIBLE
-                //binding.phDetail.shimmerView.visibility = View.VISIBLE
-                //binding.phDetail.shimmerView.startShimmer()
-            } else {
-                //binding.phDetail.shimmerView.stopShimmer()
-                //binding.phDetail.shimmerView.visibility = View.GONE
-                binding.loading.root.visibility = View.GONE
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.loading.root.visibility = when {
+                isLoading -> View.VISIBLE
+                else -> View.GONE
             }
-        })
+        }
+    }
+
+    private fun openPokemon(name: String){
+        val action = PokemonDetailFragmentDirections.actionPokemonDetail(name)
+        findNavController().navigate(action)
     }
 }
 

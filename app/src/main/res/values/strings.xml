@@ -8,11 +8,11 @@
     <string name="order_by_type">Pordenar por:</string>
 
     <string name="unknown_data">¿?</string>
-    <string name="lorem_paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim "</string>
+    <string name="lorem_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim</string>
 
-    <string name="write_name_or_number_pokemon">"Puesdes buscar un pokémon escribiendo su nombre o número en la barra de busqueda"</string>
+    <string name="write_name_or_number_pokemon">Puesdes buscar un pokémon escribiendo su nombre o número en la barra de busqueda</string>
     <string name="empty_pokemon_list">Lista de pokemones vacía</string>
-    <string name="what_pokemon_are_you_looking_for">"¿Qué pokémon estas buscando? "</string>
+    <string name="what_pokemon_are_you_looking_for">¿Qué pokémon estas buscando?</string>
     <string name="no_pokemon_matches_the_search">Ningún pokemon coincide con la búsqueda realizada</string>
     <string name="no_internet_connection">¡Oh, vaya! parece que no tienes acceso a Internet</string>
     <string name="need_internet_connection">Necesitas conectarte a internet para poder ver los pokémons</string>
@@ -111,5 +111,9 @@
     <string name="accuracy">Precisión</string>
     <string name="evasion">Evasión</string>
     <string name="hp">PS</string>
+    <string name="special_abilities">Habilidades especiales</string>
+    <string name="pokemon_without_special_abilities">Este pokémon no tiene habilidades especiales</string>
+    <string name="ability">Habilidad</string>
+    <string name="effect">Efecto</string>
 
 </resources>

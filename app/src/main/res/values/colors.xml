@@ -19,8 +19,8 @@
     <color name="light_surface">#05000000</color>
 
     <color name="dark">#E6000000</color>
-    <color name="dark_density_medium">#B3000000</color>
-    <color name="dark_density_light">#99000000</color>
+    <color name="dark_density_medium">#99000000</color>
+    <color name="dark_density_light">#80000000</color>
 
     <color name="light_density_medium">#B3FFFFFF</color>
     <color name="light_density_light">#99FFFFFF</color>

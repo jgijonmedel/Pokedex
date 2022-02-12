@@ -3,14 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_density_light">
+    android:background="?attr/backgroundColor"
+    android:layout_marginBottom="@dimen/image_long_size">
 
     <ProgressBar
         android:layout_width="@dimen/image_medium_size"
         android:layout_height="@dimen/image_medium_size"
+        android:layout_centerInParent="true"
         android:background="@drawable/bg_surface_round_corner"
-        android:padding="@dimen/separation_medium"
         android:indeterminateDrawable="@drawable/ic_circular_progress"
-        android:layout_centerInParent="true"/>
+        android:padding="@dimen/separation_medium" />
 
 </RelativeLayout>

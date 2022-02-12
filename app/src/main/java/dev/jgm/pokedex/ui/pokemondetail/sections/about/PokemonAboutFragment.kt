@@ -4,6 +4,7 @@ import android.content.res.ColorStateList
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import dev.jgm.pokedex.R
 import dev.jgm.pokedex.data.model.FlavorTextEntry
@@ -14,6 +15,7 @@ import dev.jgm.pokedex.data.model.specie.Genera
 import dev.jgm.pokedex.data.model.specie.Specie
 import dev.jgm.pokedex.data.model.specie.Variety
 import dev.jgm.pokedex.databinding.FragmentPokemonAboutBinding
+import dev.jgm.pokedex.ui.pokemondetail.PokemonDetailFragmentDirections
 import dev.jgm.pokedex.ui.pokemondetail.adapter.VarietiesAdapter
 import dev.jgm.pokedex.ui.pokemondetail.sections.BaseFragmentSection
 import dev.jgm.pokedex.utils.extension.addEggGroup
@@ -26,7 +28,7 @@ class PokemonAboutFragment : BaseFragmentSection(R.layout.fragment_pokemon_about
 
     private lateinit var binding: FragmentPokemonAboutBinding
     private val viewModel: PokemonAboutViewModel by viewModels()
-    val language = Locale.getDefault().language
+    private val language = Locale.getDefault().language
 
     override fun initFragment(view: View) {
         binding = FragmentPokemonAboutBinding.bind(view)
@@ -40,24 +42,25 @@ class PokemonAboutFragment : BaseFragmentSection(R.layout.fragment_pokemon_about
     override fun getTitleId(): Int = R.string.about
 
     private fun initObservers() {
-        viewModel.specie.observe(viewLifecycleOwner, { specie ->
+        viewModel.specie.observe(viewLifecycleOwner) { specie ->
             if (specie != null) {
-                val descriptions = specie.flavor_text_entries.filter{ it.language.name == language }
-                val genera = specie.genera.filter{ it.language.name == language }
+                val descriptions =
+                    specie.flavor_text_entries.filter { it.language.name == language }
+                val genera = specie.genera.filter { it.language.name == language }
                 setUpDescription(descriptions, genera)
                 pokedexData(specie)
                 setUpVarieties(specie.varieties)
             }
-        })
-        viewModel.isLoading.observe(viewLifecycleOwner, { isLoading ->
-            if(isLoading) {
+        }
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            if (isLoading) {
                 binding.content.visibility = View.GONE
             } else {
 
                 binding.content.visibility = View.VISIBLE
                 binding.phAbout.root.visibility = View.GONE
             }
-        })
+        }
     }
 
     private fun setUpDescription(descriptions: List<FlavorTextEntry>, generals: List<Genera>) {
@@ -102,11 +105,16 @@ class PokemonAboutFragment : BaseFragmentSection(R.layout.fragment_pokemon_about
 
         if (list.isNotEmpty()) {
             val layoutManager = GridLayoutManager(binding.root.context, 3)
-            val adapter = VarietiesAdapter(list)
+            val adapter = VarietiesAdapter(list) { openPokemon(it) }
             binding.rvVarieties.layoutManager = layoutManager
             binding.rvVarieties.adapter = adapter
         } else{
             binding.tvNoVarieties.visibility = View.VISIBLE
         }
+    }
+
+    private fun openPokemon(name: String){
+        val action = PokemonDetailFragmentDirections.actionPokemonDetail(name)
+        findNavController().navigate(action)
     }
 }

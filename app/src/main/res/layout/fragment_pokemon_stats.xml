@@ -1,83 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:style="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="?attr/backgroundColor"
+    android:orientation="vertical"
     tools:context=".ui.pokemondetail.sections.stat.PokemonStatsFragment">
 
-    <ScrollView
-        android:id="@+id/content"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?attr/backgroundColor"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/separation_medium"
+        style:divider="@drawable/divider_long"
+        style:showDividers="middle">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/separation_medium"
+                android:text="@string/base_stats"
+                android:textAppearance="@style/text_subtitle" />
+
+            <include
+                android:id="@+id/hp"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/attack"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/defense"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/special_attack"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/special_defense"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/speed"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/accuracy"
+                layout="@layout/item_stat_list" />
+
+            <include
+                android:id="@+id/evasion"
+                layout="@layout/item_stat_list" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/separation_medium"
-            style:divider="@drawable/divider_long"
+            android:padding="@dimen/separation_small"
+            style:divider="@drawable/divider_vertical_small"
             style:showDividers="middle">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/stats"
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <include
-                    android:id="@+id/hp"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/attack"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/defense"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/special_attack"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/special_defense"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/speed"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/accuracy"
-                    layout="@layout/item_stat_list"/>
-                <include
-                    android:id="@+id/evasion"
-                    layout="@layout/item_stat_list"/>
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_marginBottom="@dimen/separation_small"
+                android:text="@string/special_abilities"
+                android:textAppearance="@style/text_subtitle" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoSpecialAbilities"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/separation_small"
-                style:divider="@drawable/divider_vertical_small"
-                style:showDividers="middle">
+                android:text="@string/pokemon_without_special_abilities"
+                android:textAppearance="@style/text_body"
+                android:textColor="?attr/colorOnSecondary"
+                android:visibility="gone" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvGenera"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/name"
-                    android:textAppearance="@style/text_subtitle" />
+            <include
+                android:id="@+id/loading"
+                layout="@layout/loading_screen"/>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/unknown_description"
-                    android:textAppearance="@style/text_body" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSpecialAbilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

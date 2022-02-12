@@ -145,7 +145,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tabGravity="start"
-                app:tabIndicatorColor="?attr/colorOnSecondary"
+                app:tabIndicatorColor="@color/accent"
                 app:tabIndicatorFullWidth="false"
                 app:tabSelectedTextColor="?attr/colorOnPrimary"
                 app:tabTextAppearance="@style/text_subtitle"

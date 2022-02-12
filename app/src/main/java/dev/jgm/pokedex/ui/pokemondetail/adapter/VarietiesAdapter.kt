@@ -12,7 +12,10 @@ import dev.jgm.pokedex.utils.extension.formatDisplay
 import dev.jgm.pokedex.utils.extension.getIdFromUrl
 import dev.jgm.pokedex.utils.extension.loadImage
 
-class VarietiesAdapter(private val varietyList: List<Variety>) : RecyclerView.Adapter<VarietiesViewHolder>() {
+class VarietiesAdapter(
+    private val varietyList: List<Variety>,
+    private val onClick: (String)->Unit
+) : RecyclerView.Adapter<VarietiesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VarietiesViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -22,7 +25,7 @@ class VarietiesAdapter(private val varietyList: List<Variety>) : RecyclerView.Ad
 
     override fun onBindViewHolder(holder: VarietiesViewHolder, position: Int) {
         val variety = varietyList[position]
-        holder.render(variety)
+        holder.render(variety, onClick)
     }
 
     override fun getItemCount(): Int = varietyList.size
@@ -32,10 +35,11 @@ class VarietiesViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     private val binding = ItemPokemonListBinding.bind(view)
 
-    fun render(variety: Variety) {
+    fun render(variety: Variety, onClick: (String)->Unit) {
         val id = variety.pokemon.url.getIdFromUrl()
         binding.image.loadImage(Constants.URL_DEFAULT_IMAGE.plus("$id.png"))
         binding.name.text = variety.pokemon.name
         binding.number.text = id.formatDisplay()
+        binding.root.setOnClickListener { onClick(variety.pokemon.name) }
     }
 }
