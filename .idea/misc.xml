@@ -18,6 +18,7 @@
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_height.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_help.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14375" />
+        <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2185" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_linear_progress.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_pokemon_type_rock.xml" value="0.11822916666666666" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/drawable/ic_search.xml" value="0.22760416666666666" />
@@ -74,6 +75,8 @@
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/layout/placeholder_row_list.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/layout/placeholder_section.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/menu/menu_with_search.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2185" />
+        <entry key="..\:/Users/anamg/Desktop/jimmy/Proyectos/Android/pokedex_xml/code/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2185" />
       </map>
     </option>
   </component>
